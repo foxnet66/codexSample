@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-800 antialiased;
+}
+
+a {
+  @apply text-primary transition-colors hover:text-primary-dark;
+}
+
+section {
+  @apply py-16 md:py-24;
+}
