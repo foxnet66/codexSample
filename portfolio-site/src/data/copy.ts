@@ -153,9 +153,9 @@ export const copy: Record<Language, Copy> = {
       title: "Schedule a project intro",
       description: "Share your goals and timeline—I'll respond within 24 hours.",
       fields: {
-        name: { label: "Name", placeholder: "Jane Smith" },
-        email: { label: "Email", placeholder: "hello@company.com" },
-        company: { label: "Company / Team", placeholder: "Acme Inc." },
+        name: { label: "Name", placeholder: "James Wang" },
+        email: { label: "Email", placeholder: "hello@jameswang.design" },
+        company: { label: "Company / Team", placeholder: "James Wang Studio" },
         message: {
           label: "Project summary",
           placeholder: "Tell me about your challenges, goals, and timeline."
@@ -242,9 +242,9 @@ export const copy: Record<Language, Copy> = {
       title: "预约咨询或合作",
       description: "留下项目信息与目标，我会在 24 小时内与您取得联系。",
       fields: {
-        name: { label: "姓名", placeholder: "张女士" },
-        email: { label: "邮箱", placeholder: "hello@company.com" },
-        company: { label: "公司 / 团队", placeholder: "Acme Inc." },
+        name: { label: "姓名", placeholder: "王军" },
+        email: { label: "邮箱", placeholder: "hello@jameswang.design" },
+        company: { label: "公司 / 团队", placeholder: "王军工作室" },
         message: {
           label: "项目简介",
           placeholder: "请描述当前的挑战、目标与时间计划。"
