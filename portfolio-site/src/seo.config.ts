@@ -1,10 +1,10 @@
 import type { DefaultSeoProps } from "next-seo";
 
 const seoConfig: DefaultSeoProps = {
-  titleTemplate: "%s | James Wang · Product Designer",
-  defaultTitle: "James Wang · Product Designer",
+  titleTemplate: "%s | James Wang · AWS Solutions Architect",
+  defaultTitle: "James Wang · AWS Solutions Architect & Full-stack Engineer",
   description:
-    "Portfolio showcasing product design, UX strategy, and front-end engineering services for modern digital products.",
+    "Portfolio showcasing AWS architecture, cloud strategy, and full-stack engineering services for modern digital products.",
   openGraph: {
     type: "website",
     locale: "en_US",

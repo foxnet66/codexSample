@@ -102,43 +102,43 @@ export const copy: Record<Language, Copy> = {
       languageToggleLabel: "Switch to Chinese"
     },
     hero: {
-      badge: "Product Designer · Front-end Engineer",
-      heading: "Transform complex workflows into delightful digital experiences",
+      badge: "AWS Solutions Architect · Full-stack Engineer",
+      heading: "Design resilient cloud products end to end",
       description:
-        "I partner with B2B and SaaS teams to build end-to-end design and front-end systems grounded in measurable outcomes.",
+        "I partner with startups and enterprises to architect AWS infrastructure, build full-stack applications, and ship measurable outcomes.",
       primaryCta: "Book a strategy call",
       secondaryCta: "View recent work",
       highlight: {
         name: "James Wang",
-        role: "Product Designer & Front-end Engineer",
+        role: "AWS Solutions Architect & Full-stack Engineer",
         quote:
-          "A decade of cross-disciplinary experience shipping for finance, enterprise, and AI teams with a balance of craft and velocity."
+          "A decade of architecting secure, scalable platforms for finance, enterprise, and AI teams—balancing speed, governance, and developer experience."
       }
     },
     services: {
       eyebrow: "Services",
-      title: "End-to-end product partnerships",
+      title: "Cloud architecture & product delivery",
       description:
-        "Strategy, experience, and engineering support to help your team move from idea to measurable impact.",
+        "Strategic planning, AWS architecture, and application engineering to guide your team from idea to production.",
       learnMore: "Learn more"
     },
     skills: {
       eyebrow: "Skills",
       title: "A multidisciplinary toolkit",
       description:
-        "Grounded in strategy, experience, and engineering to ensure every launch is elegant and sustainable."
+        "AWS expertise, application architecture, and developer experience to keep every launch resilient and maintainable."
     },
     projects: {
       eyebrow: "Case Studies",
       title: "Selected projects",
       description:
-        "Recent strategy, design, and engineering engagements across B2B, finance, and enterprise platforms.",
+        "Recent cloud architecture and full-stack delivery engagements across B2B, finance, and enterprise platforms.",
       viewCaseStudy: "View case study"
     },
     cta: {
-      heading: "Let's build your next flagship product",
+      heading: "Let's build your next cloud-native product",
       description:
-        "I help fast-moving teams validate ideas, refine experiences, and ship resilient front-end implementations.",
+        "I help fast-moving teams design AWS architectures, accelerate development, and ship reliable full-stack experiences.",
       primaryAction: {
         label: "Book a strategy call",
         href: "mailto:hello@jameswang.design?subject=Project%20inquiry"
@@ -178,7 +178,7 @@ export const copy: Record<Language, Copy> = {
       ]
     },
     meta: {
-      homeTitle: "James Wang · Product Designer & Front-end Engineer"
+      homeTitle: "James Wang · AWS Solutions Architect & Full-stack Engineer"
     }
   },
   zh: {
@@ -196,38 +196,38 @@ export const copy: Record<Language, Copy> = {
       languageToggleLabel: "切换至英文"
     },
     hero: {
-      badge: "产品设计师 · 前端工程师",
-      heading: "让复杂业务，化为令人愉悦的数字体验",
+      badge: "AWS 解决方案架构师 · 全栈工程师",
+      heading: "端到端打造稳健的云端产品",
       description:
-        "我帮助 B2B 与 SaaS 团队搭建从策略到落地的一站式设计与前端体系，以可衡量的业务指标驱动产品持续迭代。",
+        "我帮助初创与企业团队规划 AWS 架构、构建全栈应用，并以可衡量的业务目标驱动交付。",
       primaryCta: "预约策略会议",
       secondaryCta: "查看项目案例",
       highlight: {
         name: "王军",
-        role: "产品设计师 & 前端工程师",
-        quote: "十年跨学科经验，服务于金融、企业服务与 AI 等行业，为团队带来兼顾体验与效率的产品方案。"
+        role: "AWS 解决方案架构师 & 全栈工程师",
+        quote: "十年云架构与工程化实践经验，服务于金融、企业服务与 AI 团队，兼顾安全、效率与治理。"
       }
     },
     services: {
       eyebrow: "服务",
-      title: "端到端的产品设计服务",
-      description: "结合策略、体验与工程化能力，为团队提供可落地的端到端解决方案。",
+      title: "云架构与产品落地服务",
+      description: "提供策略规划、AWS 架构设计与应用工程化能力，助力团队快速从构想到上线。",
       learnMore: "深入了解"
     },
     skills: {
       eyebrow: "技能",
-      title: "跨学科的核心技能组合",
-      description: "深耕策略、体验与工程三大领域，确保每一次交付既优雅又可持续迭代。"
+      title: "跨领域的核心能力组合",
+      description: "深耕 AWS 专业知识、应用架构与开发者体验，确保每次交付都稳定且易于维护。"
     },
     projects: {
       eyebrow: "案例研究",
       title: "代表项目",
-      description: "精选近年的战略咨询、体验设计与工程化落地项目，覆盖 B2B、金融与企业服务等行业。",
+      description: "精选近年的云架构与全栈交付项目，覆盖 B2B、金融与企业服务等行业。",
       viewCaseStudy: "查看详细案例"
     },
     cta: {
-      heading: "一起打造下一款标杆产品",
-      description: "我帮助高速成长的团队验证想法、打磨体验，并将设计落地为稳定可维护的前端交付。",
+      heading: "一起打造下一款云原生产品",
+      description: "我帮助高速成长的团队设计 AWS 架构、加速开发，并交付可靠的全栈体验。",
       primaryAction: {
         label: "预约策略会议",
         href: "mailto:hello@jameswang.design?subject=%E6%9D%A5%E8%81%94%E7%B3%BB%E5%90%88%E4%BD%9C"
@@ -267,7 +267,7 @@ export const copy: Record<Language, Copy> = {
       ]
     },
     meta: {
-      homeTitle: "王军 · 产品设计师 & 前端工程师"
+      homeTitle: "王军 · AWS 解决方案架构师 & 全栈工程师"
     }
   }
 };
