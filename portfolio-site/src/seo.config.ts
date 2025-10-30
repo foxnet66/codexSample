@@ -7,7 +7,7 @@ const seoConfig: DefaultSeoProps = {
     "Portfolio showcasing product design, UX strategy, and front-end engineering services for modern digital products.",
   openGraph: {
     type: "website",
-    locale: "zh_CN",
+    locale: "en_US",
     url: "https://www.janedoe.design",
     siteName: "Jane Doe Portfolio",
     images: [

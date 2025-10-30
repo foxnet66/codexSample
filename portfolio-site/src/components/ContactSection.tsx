@@ -1,10 +1,14 @@
 import { FormEvent, useState } from "react";
+import { getCopy } from "@/data/copy";
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeading } from "./SectionHeading";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
 export const ContactSection = () => {
   const [status, setStatus] = useState<FormState>("idle");
+  const { language } = useLanguage();
+  const { contact } = getCopy(language);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -38,9 +42,9 @@ export const ContactSection = () => {
     <section id="contact" className="bg-neutral-50">
       <div className="mx-auto flex max-w-5xl flex-col gap-12 px-6">
         <SectionHeading
-          eyebrow="Contact"
-          title="预约咨询或合作"
-          description="留下项目信息与目标，我会在 24 小时内与您取得联系。"
+          eyebrow={contact.eyebrow}
+          title={contact.title}
+          description={contact.description}
           align="center"
         />
         <form
@@ -50,19 +54,19 @@ export const ContactSection = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm font-medium text-neutral-700">
-                姓名
+                {contact.fields.name.label}
               </label>
               <input
                 id="name"
                 name="name"
                 required
                 className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-800 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                placeholder="张女士"
+                placeholder={contact.fields.name.placeholder}
               />
             </div>
             <div className="flex flex-col gap-2">
               <label htmlFor="email" className="text-sm font-medium text-neutral-700">
-                邮箱
+                {contact.fields.email.label}
               </label>
               <input
                 id="email"
@@ -70,24 +74,24 @@ export const ContactSection = () => {
                 type="email"
                 required
                 className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-800 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                placeholder="hello@company.com"
+                placeholder={contact.fields.email.placeholder}
               />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="company" className="text-sm font-medium text-neutral-700">
-              公司 / 团队
+              {contact.fields.company.label}
             </label>
             <input
               id="company"
               name="company"
               className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-800 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="Acme Inc."
+              placeholder={contact.fields.company.placeholder}
             />
           </div>
           <div className="flex flex-col gap-2">
             <label htmlFor="message" className="text-sm font-medium text-neutral-700">
-              项目简介
+              {contact.fields.message.label}
             </label>
             <textarea
               id="message"
@@ -95,7 +99,7 @@ export const ContactSection = () => {
               rows={4}
               required
               className="rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-neutral-800 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="请描述当前的挑战、目标与时间计划。"
+              placeholder={contact.fields.message.placeholder}
             />
           </div>
           <button
@@ -103,13 +107,13 @@ export const ContactSection = () => {
             disabled={status === "submitting"}
             className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {status === "submitting" ? "发送中..." : "提交需求"}
+            {status === "submitting" ? contact.submit.submitting : contact.submit.idle}
           </button>
           {status === "success" && (
-            <p className="text-center text-sm text-emerald-600">信息已提交，我们会尽快联系您。</p>
+            <p className="text-center text-sm text-emerald-600">{contact.success}</p>
           )}
           {status === "error" && (
-            <p className="text-center text-sm text-red-500">提交失败，请稍后重试或通过邮箱联系。</p>
+            <p className="text-center text-sm text-red-500">{contact.error}</p>
           )}
         </form>
       </div>

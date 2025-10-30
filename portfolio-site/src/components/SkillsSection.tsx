@@ -1,14 +1,20 @@
-import { skills } from "@/data/skills";
+import { getCopy } from "@/data/copy";
+import { getSkills } from "@/data/skills";
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeading } from "./SectionHeading";
 
 export const SkillsSection = () => {
+  const { language } = useLanguage();
+  const skills = getSkills(language);
+  const { skills: skillsCopy } = getCopy(language);
+
   return (
     <section id="skills" className="bg-neutral-50">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <SectionHeading
-          eyebrow="Skills"
-          title="跨学科的核心技能组合"
-          description="深耕策略、体验与工程三大领域，确保每一次交付既优雅又可持续迭代。"
+          eyebrow={skillsCopy.eyebrow}
+          title={skillsCopy.title}
+          description={skillsCopy.description}
         />
         <div className="grid gap-6 md:grid-cols-3">
           {skills.map((category) => (

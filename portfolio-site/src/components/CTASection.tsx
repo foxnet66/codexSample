@@ -1,7 +1,11 @@
 import Link from "next/link";
-import { cta } from "@/data/cta";
+import { getCopy } from "@/data/copy";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const CTASection = () => {
+  const { language } = useLanguage();
+  const { cta } = getCopy(language);
+
   return (
     <section className="bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white">
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-20 text-center">

@@ -1,14 +1,20 @@
-import { services } from "@/data/services";
+import { getCopy } from "@/data/copy";
+import { getServices } from "@/data/services";
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeading } from "./SectionHeading";
 
 export const ServicesSection = () => {
+  const { language } = useLanguage();
+  const services = getServices(language);
+  const { services: servicesCopy } = getCopy(language);
+
   return (
     <section id="services" className="bg-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <SectionHeading
-          eyebrow="Services"
-          title="端到端的产品设计服务"
-          description="结合策略、体验与工程化能力，为团队提供可落地的端到端解决方案。"
+          eyebrow={servicesCopy.eyebrow}
+          title={servicesCopy.title}
+          description={servicesCopy.description}
         />
         <div className="grid gap-6 md:grid-cols-3">
           {services.map((service) => (
@@ -20,7 +26,7 @@ export const ServicesSection = () => {
               <h3 className="text-2xl font-semibold text-neutral-900">{service.title}</h3>
               <p className="text-base leading-relaxed text-neutral-600">{service.description}</p>
               <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-primary">
-                深入了解
+                {servicesCopy.learnMore}
                 <svg
                   aria-hidden
                   viewBox="0 0 24 24"

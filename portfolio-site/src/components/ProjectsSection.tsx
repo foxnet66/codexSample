@@ -1,16 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/data/projects";
+import { getCopy } from "@/data/copy";
+import { getProjects } from "@/data/projects";
+import { useLanguage } from "@/context/LanguageContext";
 import { SectionHeading } from "./SectionHeading";
 
 export const ProjectsSection = () => {
+  const { language } = useLanguage();
+  const projects = getProjects(language);
+  const { projects: projectsCopy } = getCopy(language);
+
   return (
     <section id="projects" className="bg-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <SectionHeading
-          eyebrow="Case Studies"
-          title="代表项目"
-          description="精选近年的战略咨询、体验设计与工程化落地项目，覆盖 B2B、金融与企业服务等行业。"
+          eyebrow={projectsCopy.eyebrow}
+          title={projectsCopy.title}
+          description={projectsCopy.description}
         />
         <div className="grid gap-8">
           {projects.map((project) => (
@@ -39,7 +45,7 @@ export const ProjectsSection = () => {
                   href={project.link}
                   className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary hover:text-primary-dark"
                 >
-                  查看详细案例
+                  {projectsCopy.viewCaseStudy}
                   <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
                     <path d="M5 12a1 1 0 0 1 1-1h9.586l-3.293-3.293a1 1 0 0 1 1.414-1.414l5 5a1 1 0 0 1 0 1.414l-5 5a1 1 0 1 1-1.414-1.414L15.586 13H6a1 1 0 0 1-1-1Z" />
                   </svg>
