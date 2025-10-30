@@ -14,7 +14,8 @@ export const ContactSection = () => {
     event.preventDefault();
     setStatus("submitting");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -31,7 +32,7 @@ export const ContactSection = () => {
       }
 
       setStatus("success");
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       console.error(error);
       setStatus("error");
