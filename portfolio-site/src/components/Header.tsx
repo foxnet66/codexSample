@@ -2,11 +2,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getCopy } from "@/data/copy";
 import { useLanguage } from "@/context/LanguageContext";
+import { LanguageToggle } from "./LanguageToggle";
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
   const { header } = getCopy(language);
 
   useEffect(() => {
@@ -28,12 +29,6 @@ export const Header = () => {
   }, [isMenuOpen]);
 
   const navItems = header.nav;
-  const languageToggleLabel = language === "en" ? "中文" : "EN";
-
-  const handleLanguageSwitch = () => {
-    toggleLanguage();
-    setMenuOpen(false);
-  };
 
   return (
     <header
@@ -52,15 +47,9 @@ export const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
-          <button
-            type="button"
-            onClick={handleLanguageSwitch}
-            aria-label={header.languageToggleLabel}
-            className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-700 transition hover:border-neutral-500 hover:text-neutral-900"
-          >
-            {languageToggleLabel}
-          </button>
+        <div className="flex items-center gap-3">
+          <LanguageToggle className="md:hidden" />
+          <LanguageToggle className="hidden md:flex" />
           <Link
             href="#contact"
             className="hidden rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-dark md:inline-flex"
@@ -87,14 +76,7 @@ export const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <button
-              type="button"
-              onClick={handleLanguageSwitch}
-              aria-label={header.languageToggleLabel}
-              className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2 text-sm font-semibold text-neutral-900 transition hover:border-neutral-500"
-            >
-              {languageToggleLabel}
-            </button>
+            <LanguageToggle variant="mobile" onToggle={() => setMenuOpen(false)} />
             <Link
               href="#contact"
               className="rounded-full bg-primary px-5 py-2 text-center text-sm font-semibold text-white"
