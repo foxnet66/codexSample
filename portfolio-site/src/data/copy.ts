@@ -89,7 +89,7 @@ export type Copy = {
 export const copy: Record<Language, Copy> = {
   en: {
     header: {
-      brand: "Jane Doe",
+      brand: "James Wang",
       nav: [
         { href: "#services", label: "Services" },
         { href: "#skills", label: "Skills" },
@@ -109,7 +109,7 @@ export const copy: Record<Language, Copy> = {
       primaryCta: "Book a strategy call",
       secondaryCta: "View recent work",
       highlight: {
-        name: "Jane Doe",
+        name: "James Wang",
         role: "Product Designer & Front-end Engineer",
         quote:
           "A decade of cross-disciplinary experience shipping for finance, enterprise, and AI teams with a balance of craft and velocity."
@@ -141,11 +141,11 @@ export const copy: Record<Language, Copy> = {
         "I help fast-moving teams validate ideas, refine experiences, and ship resilient front-end implementations.",
       primaryAction: {
         label: "Book a strategy call",
-        href: "mailto:hello@janedoe.design?subject=Project%20inquiry"
+        href: "mailto:hello@jameswang.design?subject=Project%20inquiry"
       },
       secondaryAction: {
         label: "Download portfolio PDF",
-        href: "https://cdn.janedoe.design/portfolio.pdf"
+        href: "https://cdn.jameswang.design/portfolio.pdf"
       }
     },
     contact: {
@@ -169,21 +169,21 @@ export const copy: Record<Language, Copy> = {
       error: "Something went wrong. Please try again or reach out via email."
     },
     footer: {
-      studioName: "Jane Doe Studio",
+      studioName: "James Wang Studio",
       rights: "All rights reserved.",
       links: [
-        { href: "mailto:hello@janedoe.design", label: "hello@janedoe.design" },
-        { href: "https://dribbble.com/janedoe", label: "Dribbble" },
-        { href: "https://www.linkedin.com/in/janedoe", label: "LinkedIn" }
+        { href: "mailto:hello@jameswang.design", label: "hello@jameswang.design" },
+        { href: "https://dribbble.com/jameswang", label: "Dribbble" },
+        { href: "https://www.linkedin.com/in/jameswang", label: "LinkedIn" }
       ]
     },
     meta: {
-      homeTitle: "Jane Doe · Product Designer & Front-end Engineer"
+      homeTitle: "James Wang · Product Designer & Front-end Engineer"
     }
   },
   zh: {
     header: {
-      brand: "Jane Doe",
+      brand: "王军",
       nav: [
         { href: "#services", label: "服务" },
         { href: "#skills", label: "技能" },
@@ -203,7 +203,7 @@ export const copy: Record<Language, Copy> = {
       primaryCta: "预约策略会议",
       secondaryCta: "查看项目案例",
       highlight: {
-        name: "Jane Doe",
+        name: "王军",
         role: "产品设计师 & 前端工程师",
         quote: "十年跨学科经验，服务于金融、企业服务与 AI 等行业，为团队带来兼顾体验与效率的产品方案。"
       }
@@ -230,11 +230,11 @@ export const copy: Record<Language, Copy> = {
       description: "我帮助高速成长的团队验证想法、打磨体验，并将设计落地为稳定可维护的前端交付。",
       primaryAction: {
         label: "预约策略会议",
-        href: "mailto:hello@janedoe.design?subject=%E6%9D%A5%E8%81%94%E7%B3%BB%E5%90%88%E4%BD%9C"
+        href: "mailto:hello@jameswang.design?subject=%E6%9D%A5%E8%81%94%E7%B3%BB%E5%90%88%E4%BD%9C"
       },
       secondaryAction: {
         label: "下载作品集 PDF",
-        href: "https://cdn.janedoe.design/portfolio.pdf"
+        href: "https://cdn.jameswang.design/portfolio.pdf"
       }
     },
     contact: {
@@ -258,16 +258,16 @@ export const copy: Record<Language, Copy> = {
       error: "提交失败，请稍后重试或通过邮箱联系。"
     },
     footer: {
-      studioName: "Jane Doe Studio",
+      studioName: "王军工作室",
       rights: "保留所有权利。",
       links: [
-        { href: "mailto:hello@janedoe.design", label: "hello@janedoe.design" },
-        { href: "https://dribbble.com/janedoe", label: "Dribbble" },
-        { href: "https://www.linkedin.com/in/janedoe", label: "LinkedIn" }
+        { href: "mailto:hello@jameswang.design", label: "hello@jameswang.design" },
+        { href: "https://dribbble.com/jameswang", label: "Dribbble" },
+        { href: "https://www.linkedin.com/in/jameswang", label: "LinkedIn" }
       ]
     },
     meta: {
-      homeTitle: "Jane Doe · 产品设计师 & 前端工程师"
+      homeTitle: "王军 · 产品设计师 & 前端工程师"
     }
   }
 };
